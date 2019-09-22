@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct node
+{
+int data;
+struct node *next;
+};
+struct node *addNode(struct node*h)
+{
+struct node *newnode=(struct node *)malloc(sizeof(struct node));
+scanf("%d",&newnode->data);
+newnode->next=NULL;
+h->next=newnode;
+return newnode;
+}
+void display(struct node h)
+{
+while(h!=NULL)
+{
+printf("%d",h->data);
+h=h->next;
+}
+}
+void main()
+{
+int n;
+printf("enter index node to find from end");
+scanf("%d",&n);
+
+
+ 
+
